@@ -19,7 +19,7 @@ services:
       # BLE MAC address of your Meshtastic device
       # Find it using: docker compose run --rm ble-bridge --scan
       # To change: Edit the address below or override with BLE_ADDRESS environment variable
-      - BLE_ADDRESS=48:CA:43:59:4C:71
+      - BLE_ADDRESS=FB:11:17:E4:CD:EE
     entrypoint: ["sh", "-c"]
     command: ["python -m cli.main $$BLE_ADDRESS --verbose"]
     healthcheck:
