@@ -1,23 +1,20 @@
 # Core dependencies for Meshtastic BLE Bridge.
 # Every package, transitive ones included, is pinned exactly. Resolved with uv
 # for all platforms (the Docker image is Python 3.11 on Linux, the Windows GUI
-# and CI also install this file) and Python 3.9 and later:
-#   uv pip compile --universal --python-version 3.9 core.in
+# and CI also install this file) and Python 3.11 and later:
+#   uv pip compile --universal --python-version 3.11 core.in
 # where core.in holds the two direct requirements:
 #   meshtastic==2.7.11
 #   bleak>=0.22.3,<1        (meshtastic 2.7 needs 0.22.3; bleak stays on 0.x)
-async-timeout==4.0.3 ; python_full_version < '3.11'
 bleak==0.22.3
 bleak-winrt==1.2.0 ; python_full_version < '3.12' and sys_platform == 'win32'
 certifi==2026.10.23
 charset-normalizer==3.5.2
-dbus-fast==2.45.1 ; python_full_version < '3.10' and sys_platform == 'linux'
-dbus-fast==2.46.4 ; python_full_version >= '3.10' and sys_platform == 'linux'
+dbus-fast==2.46.4 ; sys_platform == 'linux'
 idna==3.20
 meshtastic==2.7.11
 packaging==26.3
-protobuf==6.33.6 ; python_full_version < '3.10'
-protobuf==7.36.2 ; python_full_version >= '3.10'
+protobuf==7.36.2
 pyobjc-core==10.3.2 ; sys_platform == 'darwin'
 pyobjc-framework-cocoa==10.3.2 ; sys_platform == 'darwin'
 pyobjc-framework-corebluetooth==10.3.2 ; sys_platform == 'darwin'
@@ -25,12 +22,10 @@ pyobjc-framework-libdispatch==10.3.2 ; sys_platform == 'darwin'
 pypubsub==4.0.7
 pyserial==3.5
 pyyaml==6.0.3
-requests==2.32.5 ; python_full_version < '3.10'
-requests==2.34.2 ; python_full_version >= '3.10'
+requests==2.34.2
 tabulate==0.9.0
 typing-extensions==4.16.0 ; python_full_version < '3.12'
-urllib3==2.6.3 ; python_full_version < '3.10'
-urllib3==2.8.0 ; python_full_version >= '3.10'
+urllib3==2.8.0
 winrt-runtime==2.3.0 ; python_full_version >= '3.12' and sys_platform == 'win32'
 winrt-windows-devices-bluetooth==2.3.0 ; python_full_version >= '3.12' and sys_platform == 'win32'
 winrt-windows-devices-bluetooth-advertisement==2.3.0 ; python_full_version >= '3.12' and sys_platform == 'win32'
