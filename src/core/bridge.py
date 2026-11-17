@@ -1,7 +1,7 @@
 """Main bridge orchestrator - platform agnostic core"""
 import asyncio
 import logging
-from meshtastic import mesh_pb2
+from meshtastic.protobuf import mesh_pb2
 from .ble_handler import BLEHandler
 from .tcp_handler import TCPHandler
 from .cache_manager import CacheManager
@@ -158,7 +158,7 @@ class MeshtasticBridge:
                     # Even without cache, send want_config_id to initialize connection
                     # This triggers the device to send its config, nodes, channels, etc.
                     try:
-                        from meshtastic import mesh_pb2
+                        from meshtastic.protobuf import mesh_pb2
                         import random
 
                         to_radio = mesh_pb2.ToRadio()

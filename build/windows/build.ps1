@@ -6,8 +6,8 @@ Write-Host ""
 
 # Check Python version
 $pythonVersion = python --version 2>&1
-if ($pythonVersion -notmatch "Python 3\.(9|10|11|12)") {
-    Write-Host "Error: Python 3.9+ required" -ForegroundColor Red
+if ($pythonVersion -notmatch "Python 3\.(11|12)") {
+    Write-Host "Error: Python 3.11 or 3.12 required (Pillow 13 needs 3.11+)" -ForegroundColor Red
     Write-Host "Current version: $pythonVersion" -ForegroundColor Red
     exit 1
 }

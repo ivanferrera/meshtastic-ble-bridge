@@ -2,7 +2,7 @@
 import asyncio
 import logging
 from typing import List, Optional, Callable
-from meshtastic import mesh_pb2
+from meshtastic.protobuf import mesh_pb2
 from .protocol import ProtocolHandler
 from .stats import StatsCollector
 

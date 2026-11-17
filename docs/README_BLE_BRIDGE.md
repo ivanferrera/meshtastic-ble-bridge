@@ -78,7 +78,7 @@ environment:
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.9+ (the Windows tray GUI needs 3.11+)
 - Bluetooth adapter (built-in or USB)
 - Meshtastic device with BLE enabled
 

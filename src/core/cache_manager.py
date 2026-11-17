@@ -3,7 +3,7 @@ import asyncio
 import logging
 import time
 from typing import Optional, Tuple, List
-from meshtastic import mesh_pb2, telemetry_pb2
+from meshtastic.protobuf import mesh_pb2, telemetry_pb2
 from .protocol import ProtocolHandler
 from .stats import StatsCollector
 

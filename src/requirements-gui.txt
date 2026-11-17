@@ -1,11 +1,17 @@
-# GUI dependencies for Windows
+# GUI dependencies for the Windows tray app.
+# Pillow 13 needs Python 3.11 or later, so the GUI does too.
+# Pinned exactly, transitive dependencies included. Resolved with uv for all
+# platforms and Python 3.11 against the pins in requirements.txt:
+#   uv pip compile --universal --python-version 3.11 -c requirements.txt gui.in
+# where gui.in holds the direct requirements of requirements.txt plus:
+#   pystray==0.19.5
+#   Pillow>=13,<14
+#   pywin32==306; platform_system=="Windows"
 -r requirements.txt
 
-# System tray support
+pillow==13.0.0
+pyobjc-framework-quartz==10.3.2 ; sys_platform == 'darwin'
 pystray==0.19.5
-
-# Image manipulation for icons
-Pillow==10.2.0
-
-# Windows integration (optional but recommended)
-pywin32==306; platform_system=="Windows"
+python-xlib==0.33 ; sys_platform == 'linux'
+pywin32==306 ; sys_platform == 'win32'
+six==1.17.0
