@@ -1,3 +1,15 @@
-pytest>=7.4.0
-pytest-asyncio>=0.21.0
-pytest-cov>=4.1.0
+# Test dependencies, pinned exactly with their transitive dependencies.
+# Resolved with uv for all platforms and Python 3.11 and later (the CI matrix)
+# against the pins in requirements.txt:
+#   uv pip compile --universal --python-version 3.11 -c requirements.txt test.in
+# where test.in lists pytest, pytest-asyncio and pytest-cov.
+colorama==0.4.6 ; sys_platform == 'win32'
+coverage==7.17.3
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.7.0
+pygments==2.21.0
+pytest==9.2.0
+pytest-asyncio==1.5.0
+pytest-cov==7.1.0
+typing-extensions==4.16.0 ; python_full_version < '3.13'

@@ -42,7 +42,7 @@ Main bridge application with:
 ### 2. Dockerfile
 Python 3.11-slim based container with:
 - bluetooth/bluez system packages
-- meshtastic==2.3.12 and bleak==0.21.1
+- meshtastic==2.7.11 and bleak==0.22.3, with every transitive dependency pinned in requirements.txt
 - Exposes port 4403
 
 ### 3. docker-compose.ble.yml
