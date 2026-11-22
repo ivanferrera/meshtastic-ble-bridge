@@ -19,7 +19,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: ['3.9', '3.10', '3.11', '3.12']
+        # 3.14 waits for bleak 1.x: bleak 0.22.3 declares Requires-Python <3.14
+        # and its macOS and Windows backends have no 3.14 wheels.
+        python-version: ['3.11', '3.12', '3.13']
 
     steps:
       - name: Checkout code

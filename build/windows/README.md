@@ -5,7 +5,7 @@ This directory contains the configuration and scripts for building the Windows e
 ## Prerequisites
 
 - Windows 10 or 11
-- Python 3.9, 3.10, 3.11, or 3.12
+- Python 3.11 or 3.12 (Pillow 13 needs 3.11+)
 - Git (optional, for cloning repository)
 
 ## Building
@@ -82,7 +82,7 @@ The application will:
 
 ### Build Fails
 
-- Ensure Python 3.9+ is installed
+- Ensure Python 3.11+ is installed
 - Try running PowerShell as Administrator
 - Check that all dependencies installed successfully
 

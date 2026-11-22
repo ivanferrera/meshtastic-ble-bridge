@@ -27,7 +27,7 @@ import signal
 import time
 from typing import List, Optional
 from bleak import BleakClient, BleakScanner
-from meshtastic import mesh_pb2, telemetry_pb2
+from meshtastic.protobuf import mesh_pb2, telemetry_pb2
 
 # Version
 __version__ = "2.0.0"

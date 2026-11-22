@@ -78,7 +78,7 @@ environment:
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.11 to 3.13 (3.14 needs bleak 1.x; the bridge is on bleak 0.22.3). The Windows GUI build needs 3.11 or 3.12 (Pillow 13 needs 3.11+).
 - Bluetooth adapter (built-in or USB)
 - Meshtastic device with BLE enabled
 

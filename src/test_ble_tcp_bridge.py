@@ -7,7 +7,7 @@ Tests cover cache functionality, concurrent access, and error scenarios
 import pytest
 import asyncio
 from unittest.mock import Mock, AsyncMock, patch, MagicMock
-from meshtastic import mesh_pb2, telemetry_pb2
+from meshtastic.protobuf import mesh_pb2, telemetry_pb2
 import time
 
 
